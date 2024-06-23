@@ -4,6 +4,7 @@ import { Syne } from '@next/font/google';
 import './globals.css'
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v13-appRouter';
 import { Toaster } from 'sonner';
+import Providers from '@/lib/Providers/Providers';
 const syne = Syne({
   weight: ['400', '700'],
   subsets: ['latin'],
@@ -20,7 +21,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" data-theme="light">
+ <Providers>
+     <html lang="en" data-theme="light">
       <body className={syne.className}>
         <AppRouterCacheProvider>
           <>
@@ -30,5 +32,6 @@ export default function RootLayout({
         </AppRouterCacheProvider>
       </body>
     </html>
+ </Providers>
   )
 }
