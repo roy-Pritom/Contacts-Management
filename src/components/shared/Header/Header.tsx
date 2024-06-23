@@ -1,24 +1,15 @@
 "use client"
-// import { getUserInfo } from "@/services/auth.service";
-// import { TUser } from "@/types";
-// import { Avatar, Container, Tooltip } from "@mui/material";
 import dynamic from "next/dynamic";
 import Image from "next/image";
 import Link from "next/link";
-
+import BookmarkAddedIcon from '@mui/icons-material/BookmarkAdded';
 const Header = () => {
-    // const user=getUserInfo() as TUser;
     const AuthButton = dynamic(() => import('@/components/UI/AuthButton/AuthButton'), { ssr: false })
-    // console.log(user);
     const NavBarItems = <>
         <li><Link href='/'>Home</Link></li>
         <li><Link href='/add-contacts'>Add Contacts</Link></li>
         <li><Link href='/contacts'>All Contacts</Link></li>
         <li><Link href='/about'>About Us</Link></li>
-        {/* {
-            user?.id &&
-            <li><Link href={`/dashboard/${user?.role}`}>Dashboard</Link></li>
-        } */}
     </>
     return (
         <div className="flex justify-center items-center bg-gradient-to-b from-light-purple to-[#f8fafa]">
@@ -47,6 +38,7 @@ const Header = () => {
                 </div>
                <div className="navbar-end">
                <AuthButton/>
+            
                </div>
             </div>
         </div>
