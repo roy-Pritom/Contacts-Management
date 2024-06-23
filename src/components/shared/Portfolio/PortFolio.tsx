@@ -23,12 +23,12 @@ const PortFolio = ({images}:{images:string[]}) => {
                 <p className="text-sm lg:text-lg font-normal font-kanit ">
                   Sales:
                   <br />
-                  <Link href="tel:+18009694409">800-969-4409</Link>
+                  <Link href="tel:+18009694409">018617-14318</Link>
                 </p>
                 <p className="text-sm lg:text-lg font-normal font-kanit ">
                   Support:
                   <br />
-                  <Link href="tel:+18009694409">888-491-5291</Link>
+                  <Link href="tel:+18009694409">017944-11314</Link>
                 </p>
               </div>
               <div className="py-2 space-y-6 text-black">
@@ -36,14 +36,14 @@ const PortFolio = ({images}:{images:string[]}) => {
                   Sales:
                   <br />
                   <Link href="mailto:sales@acumensinc.com">
-                    sales@acumensinc.com
+                    pritom2414@gmail.com
                   </Link>
                 </p>
                 <p className="text-sm lg:text-lg font-normal font-kanit ">
                   Support:
                   <br />
                   <Link href="mailto:support@acumensinc.com">
-                    support@acumensinc.com
+                    support@gmail.com
                   </Link>
                 </p>
               </div>

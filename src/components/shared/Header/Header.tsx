@@ -20,13 +20,14 @@ const Header = () => {
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                         </div>
                         <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                            <li><Image alt="logo" src='/logo2.png' width={40} height={40}/></li>
                             {NavBarItems}
                         </ul>
                     </div>
-                   <div className="flex justify-center items-center md:ml-0 ml-2">
-                   <Image alt="logo" src='/logo2.png' width={40} height={40}/>
+                   <div className="flex justify-center items-center ">
+                   <Image alt="logo" src='/logo2.png' width={40} height={40} className="md:block hidden"/>
                   <Link href='/'>
-                  <p className="btn btn-ghost md:text-2xl text-lg font-bold">ContactHub</p>
+                  <p className="btn btn-ghost md:text-2xl text-base font-bold md:px-2 p-0">ContactHub</p>
                   </Link>
                    </div>
                 </div>

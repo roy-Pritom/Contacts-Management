@@ -72,7 +72,7 @@ const ContactCard = ({ item }: { item: TContact }) => {
         }
     }
     return (
-        <div className="card w-[320px] ml-6 md:ml-0 md:w-96 glass overflow-hidden shadow-lg bg-white cursor-pointer transform transition-transform duration-500 hover:scale-105" >
+        <div className="card w-[320px] md:w-96 glass overflow-hidden shadow-lg bg-white cursor-pointer transform transition-transform duration-500 hover:scale-105" >
             <figure className="bg-blue-Purple rounded-l-box border-b-8"><Image src={item?.profilePicture} className="w-[110px] h-[100px] rounded-full mx-auto my-12 border-2 border-white
               " alt="profilePhoto"
                 width={110}

@@ -1,5 +1,6 @@
 import { partnerImages } from "@/constants";
 import Slider from "./Slider";
+import Image from "next/image";
 
 const ImageSlider = () => {
     return (
@@ -14,7 +15,10 @@ const ImageSlider = () => {
           <div className="flex flex-wrap justify-center items-center gap-12 pb-10 md:hidden">
           {
               partnerImages?.map((image,index) => (
-                <img key={index} src={image} alt={image} className="w-28 h-28 md:w-24 md:h-24 lg:w-28 lg:h-28 object-contain" />
+                <Image key={index} src={`/${image}`} alt={image} className="w-28 h-28 md:w-24 md:h-24 lg:w-28 lg:h-28 object-contain"
+                width={96}
+                height={96}
+                />
               ))
             }
           </div>

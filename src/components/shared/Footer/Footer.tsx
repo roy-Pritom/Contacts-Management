@@ -1,7 +1,7 @@
 import { FaLinkedin, FaFacebook, FaTwitter, FaInstagram, FaYoutube } from "react-icons/fa";
 import { SiGooglemaps } from "react-icons/si";
 // importing Footer constants from constants folder
-import { footerServiceLinks1, footerServiceLinks2, AboutUs } from "../../../constants/index";
+import { footerServiceLinks1,AboutUs } from "../../../constants/index";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -39,7 +39,7 @@ const Footer = () => {
             </div>
             <div>
               <ul className="cursor-pointer flex flex-col gap-y-2">
-                {footerServiceLinks2?.map((link, index) => (
+                {footerServiceLinks1?.map((link, index) => (
                   <Link
                     key={index}
                     href={link.route}
@@ -153,7 +153,7 @@ const Footer = () => {
   
         <div className="relative inline-block rounded-full transition duration-300 ease-in-out ml-2">
           <span className="relative overflow-hidden before:content-[''] before:absolute bottom-0.5  before:-bottom-1 before:left-0 before:w-0 before:h-0.5 before:transition-width before:duration-500 before:ease-in-out hover:before:w-full">
-            © 2016 - 2024  <span className="uppercase">Acumens Media Inc.</span>
+            © 2016 - 2024  <span className="uppercase">ContactHub Inc.</span>
           </span>
         </div>
   

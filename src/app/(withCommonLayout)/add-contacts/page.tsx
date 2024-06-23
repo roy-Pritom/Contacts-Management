@@ -18,16 +18,16 @@ const AddContactsPage = () => {
         const imgData:any = await hostImage(values);
         values.phoneNumber = Number(values?.phoneNumber)
         // console.log(values);
-        const tripData = {
+        const contactData = {
             name: values?.name,
             email: values?.email,
             address: values?.address,
             phoneNumber: values?.phoneNumber,
             profilePicture: imgData?.data?.url
         }
-        // console.log(tripData);
+        // console.log(contactData);
         try {
-            const res: any = await createContact(tripData);
+            const res: any = await createContact(contactData);
             // console.log(res);
             if (res?.data?.name) {
                 toast.success("Contact created successfully", { id: toastId, duration: 1000 });
@@ -59,7 +59,7 @@ const AddContactsPage = () => {
                 />
             </div>
             <h3 className="text-center font-bold text-2xl mb-5 ">Add Contact</h3>
-            <div className="w-[80%] mx-auto shadow-lg rounded-2xl p-10 bg-white">
+            <div className="w-[80%] mx-auto shadow-lg rounded-2xl md:p-10 bg-white">
                 <MyForm onSubmit={handleSubmit}>
                     <Grid container spacing={3} >
                         <Grid item md={6} sm={12} xs={12}>

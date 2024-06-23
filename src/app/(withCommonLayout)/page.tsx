@@ -5,7 +5,7 @@ import ImageSlider from "@/components/UI/Home/ImageSlider";
 export default function HomePage() {
   return (
   <div className="bg-gradient-to-b from-light-purple to-[#f8fafa]">
-    <div className="mx-20">
+    <div className="md:mx-20 mx-5 lg:py-0 py-8">
     <Banner/>
     </div>
     <ImageSlider/>
