@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google'
 import { Syne } from '@next/font/google';
 import './globals.css'
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v13-appRouter';
+import { Toaster } from 'sonner';
 const syne = Syne({
   weight: ['400', '700'],
   subsets: ['latin'],
@@ -22,7 +23,10 @@ export default function RootLayout({
     <html lang="en" data-theme="light">
       <body className={syne.className}>
         <AppRouterCacheProvider>
+          <>
+          <Toaster/>
           {children}
+          </>
         </AppRouterCacheProvider>
       </body>
     </html>

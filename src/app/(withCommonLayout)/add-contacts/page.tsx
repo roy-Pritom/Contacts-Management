@@ -7,9 +7,35 @@ import { FieldValues } from "react-hook-form";
 import PostAddIcon from '@mui/icons-material/PostAdd';
 import Lottie from 'react-lottie';
 import Chill from "../../../../Chill.json"
+import { toast } from "sonner";
+import { hostImage } from "@/utils/hostImagetoImageBB";
 const AddContactsPage = () => {
-    const handleSubmit = async (value: FieldValues) => {
-          console.log(value);
+    const handleSubmit = async (values: FieldValues) => {
+        const toastId = toast.loading("Processing...")
+        // host image to imgBB
+        const imgData = await hostImage(values);
+
+        values.phoneNumber = Number(values?.phoneNumber)
+        // console.log(values);
+        const tripData = {
+            ...values,
+            file: imgData?.data?.url
+        }
+        // console.log(tripData);
+        try {
+            const res: any = await createTrip(tripData);
+            // console.log(res);
+            if (res?.data?.id) {
+                toast.success("Trip created successfully", { id: toastId, duration: 1000 });
+
+            }
+            else {
+                toast.error("Something went wrong", { id: toastId, duration: 1000 });
+            }
+        }
+        catch (error: any) {
+            console.log(error?.message);
+        }
     }
     const defaultOptions = {
         loop: true,
