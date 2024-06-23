@@ -18,6 +18,7 @@
     "@next/font": "^14.2.4",
     "@reduxjs/toolkit": "^2.2.5",
     "@types/react-lottie": "^1.2.10",
+    "aos": "^3.0.0-beta.6",
     "axios": "^1.7.2",
     "next": "14.0.3",
     "react": "^18",
@@ -27,9 +28,11 @@
     "react-lottie": "^1.2.4",
     "react-redux": "^9.1.2",
     "react-simple-typewriter": "^5.0.1",
-    "sonner": "^1.5.0"
+    "sonner": "^1.5.0",
+    "sweetalert2": "^11.12.0"
   },
   "devDependencies": {
+    "@types/aos": "^3.0.7",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",

@@ -9,24 +9,28 @@ import Lottie from 'react-lottie';
 import Chill from "../../../../Chill.json"
 import { toast } from "sonner";
 import { hostImage } from "@/utils/hostImagetoImageBB";
+import { useCreateContactMutation } from "@/redux/api/contact/conatctApi";
 const AddContactsPage = () => {
+    const [createContact, { isLoading }] = useCreateContactMutation();
     const handleSubmit = async (values: FieldValues) => {
         const toastId = toast.loading("Processing...")
         // host image to imgBB
-        const imgData = await hostImage(values);
-
+        const imgData:any = await hostImage(values);
         values.phoneNumber = Number(values?.phoneNumber)
         // console.log(values);
         const tripData = {
-            ...values,
-            file: imgData?.data?.url
+            name: values?.name,
+            email: values?.email,
+            address: values?.address,
+            phoneNumber: values?.phoneNumber,
+            profilePicture: imgData?.data?.url
         }
         // console.log(tripData);
         try {
-            const res: any = await createTrip(tripData);
+            const res: any = await createContact(tripData);
             // console.log(res);
-            if (res?.data?.id) {
-                toast.success("Trip created successfully", { id: toastId, duration: 1000 });
+            if (res?.data?.name) {
+                toast.success("Contact created successfully", { id: toastId, duration: 1000 });
 
             }
             else {

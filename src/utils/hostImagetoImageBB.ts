@@ -5,7 +5,7 @@ export const hostImage = async (values: FieldValues) => {
     formData.append('image', values?.file as File)
     let imgData;
     if (values?.file) {
-        const res = await fetch(`https://api.imgbb.com/1/upload?key=${process.env.IMGBBKEY}`, {
+        const res = await fetch(`https://api.imgbb.com/1/upload?key=b3f46ffc2a5586c89b2b0345558951b8`, {
             method: 'POST',
             body: formData
         })

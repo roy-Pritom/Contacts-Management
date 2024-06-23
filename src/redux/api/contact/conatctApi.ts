@@ -16,10 +16,12 @@ export const contactApi = baseApi.injectEndpoints({
 
         // get all contacts
         getAllContacts: builder.query({
-            query: () => {
+            query: (args) => {
+                // console.log(args);
                 return {
                     method: "GET",
-                    url: "/contacts"
+                    url: "/contacts",
+                    params:args
                 }
             },
             providesTags: ["contact"]
