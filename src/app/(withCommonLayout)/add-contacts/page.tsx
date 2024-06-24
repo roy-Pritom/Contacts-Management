@@ -10,20 +10,24 @@ import Chill from "../../../../Chill.json"
 import { toast } from "sonner";
 import { hostImage } from "@/utils/hostImagetoImageBB";
 import { useCreateContactMutation } from "@/redux/api/contact/conatctApi";
+import { TContact } from "@/types/contact";
 const AddContactsPage = () => {
     const [createContact, { isLoading }] = useCreateContactMutation();
     const handleSubmit = async (values: FieldValues) => {
         const toastId = toast.loading("Processing...")
         // host image to imgBB
-        const imgData:any = await hostImage(values);
+        const imgData: any = await hostImage(values);
         values.phoneNumber = Number(values?.phoneNumber)
         // console.log(values);
-        const contactData = {
+        const contactData:any= {
             name: values?.name,
-            email: values?.email,
             address: values?.address,
             phoneNumber: values?.phoneNumber,
             profilePicture: imgData?.data?.url
+        }
+        // Conditionally add email if it's not empty
+        if (values?.email) {
+            contactData.email = values.email;
         }
         // console.log(contactData);
         try {
