@@ -9,7 +9,7 @@ const AboutPage = () => {
           <section className="mb-12">
             <h2 className="text-3xl font-extrabold text-gray-900 mb-4">Our Mission</h2>
             <p className="text-lg text-gray-700">
-              Our mission is to provide the best service to our customers with a commitment to quality and excellence. We strive to exceed expectations by delivering innovative solutions tailored to meet the unique needs of each client. Our dedicated team works tirelessly to ensure that every project is completed with the utmost professionalism and attention to detail. We believe in building lasting relationships based on trust, transparency, and mutual respect. Through continuous improvement and a customer-centric approach, we aim to be a leader in our industry, setting the standard for excellence and integrity.
+            At ContactHub, our mission is to simplify and enhance the way you manage your contacts. We strive to provide an intuitive, efficient, and reliable platform that keeps all your important connections organized and easily accessible. Our commitment is to help you stay connected effortlessly, whether it&apos;s for personal, professional, or business purposes. By leveraging cutting-edge technology and user-friendly design, we aim to save you time and reduce the complexity of contact management. Join us in revolutionizing how you interact with your network, ensuring you never miss an important connection or opportunity again.
               </p>
           </section>
   

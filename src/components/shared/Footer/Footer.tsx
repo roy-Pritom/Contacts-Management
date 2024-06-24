@@ -99,7 +99,7 @@ const Footer = () => {
               </Link>
             </li>
             <li className="text-xl h-8 w-8 cursor-pointer hover:scale-150 transition-all duration-700 hover:text-blue-Purple">
-              <Link href="https://www.facebook.com/acumensincdotcom/" target="_blank">
+              <Link href="https://www.facebook.com" target="_blank">
                 <Image
                   src="/facebook.webp"
                   className="w-full h-full object-contain grayscale-[10] hover:grayscale-[0]"
@@ -110,7 +110,7 @@ const Footer = () => {
               </Link>
             </li>
             <li className="text-xl h-8 w-8 cursor-pointer hover:scale-150 transition-all duration-700 hover:text-blue-Purple">
-              <Link href="https://www.instagram.com/acumensmediainc/" target="_blank">
+              <Link href="https://www.instagram.com" target="_blank">
                 <Image
                   src="/instagram.webp"
                   className="w-full h-full object-contain grayscale-[10] hover:grayscale-[0]"
@@ -132,7 +132,7 @@ const Footer = () => {
               </Link>
             </li>
             <li className="h-11 w-11 -translate-x-2 text-xl cursor-pointer hover:scale-150 transition-all duration-700 hover:text-blue-Purple">
-              <Link href="https://www.youtube.com/@acumensmediainc" target="_blank">
+              <Link href="https://www.youtube.com" target="_blank">
                 <Image
                   src="/youtubenew.webp"
                   className="w-full h-full object-contain grayscale-[10] hover:grayscale-[0]"
@@ -160,13 +160,13 @@ const Footer = () => {
   
         <div className="relative inline-block rounded-full transition duration-300 ease-in-out ml-2">
           <span className="relative overflow-hidden before:content-[''] before:absolute bottom-0.5  before:-bottom-1 before:left-0 before:w-0 before:h-0.5 before:hover:bg-blue-Purple before:transition-width before:duration-500 before:ease-in-out hover:before:w-full">
-            <Link href='/terms-condition.htm'>Terms & Conditions</Link>
+            <Link href='/terms-condition'>Terms & Conditions</Link>
           </span>
         </div>
   
         <div className="relative inline-block rounded-full transition duration-300 ease-in-out">
           <span className="relative overflow-hidden before:content-[''] before:absolute bottom-0.5  before:-bottom-1 before:left-0 before:w-0 before:h-0.5 before:hover:bg-blue-Purple before:transition-width before:duration-500 before:ease-in-out hover:before:w-full">
-            <Link href='/privacy-policy.htm'>Privacy Policy</Link>
+            <Link href='/privacy'>Privacy Policy</Link>
           </span>
         </div>
   

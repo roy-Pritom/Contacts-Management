@@ -59,7 +59,7 @@ const EditContactModal = ({ open, setOpen, id }: TProps) => {
         }
     }
     return (
-        <MYModal open={open} setOpen={setOpen} title="Post a Travel/Trip" >
+        <MYModal open={open} setOpen={setOpen} title="Post a Contact" >
             {
                 isLoading ?
                     (

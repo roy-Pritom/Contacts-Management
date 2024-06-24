@@ -8,6 +8,15 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      screens: {
+        'xs': '340px',  // Custom extra-small breakpoint
+        'sm': '640px',
+        'md': '768px',
+        'lg': '1180px',
+        'xl': '1280px',
+        '2xl': '1536px',
+        '3xl': '1800px',
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
@@ -15,7 +24,6 @@ const config: Config = {
       },
       fontFamily: {           
         syne: ["Syne", "sans-serif"],  // custom font-family
-        kanit: ["Kanit", "sans-serif"]
       },
       colors:{
         'blue-Purple' : "#5f4cdd",

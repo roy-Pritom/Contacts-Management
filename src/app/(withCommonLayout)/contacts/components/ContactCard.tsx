@@ -17,7 +17,7 @@ const ContactCard = ({ item }: { item: TContact }) => {
     const [open, setOpen] = useState<boolean>(false);
     const [deleteContact] = useDeleteContactMutation();
     // redux state
-    const favoriteContacts=useAppSelector((state:RootState)=>state.addBookmark.contacts)
+    const favoriteContacts = useAppSelector((state: RootState) => state.addBookmark.contacts)
     const dispatch = useAppDispatch();
     // delete contact
     const handleDelete = async (id: string) => {
@@ -77,6 +77,7 @@ const ContactCard = ({ item }: { item: TContact }) => {
               " alt="profilePhoto"
                 width={110}
                 height={100}
+                loading="lazy"
             /></figure>
             <div className="card-body">
                 <h2 className="card-title ">{item?.name}</h2>
@@ -86,7 +87,7 @@ const ContactCard = ({ item }: { item: TContact }) => {
 
                 <div className="card-actions justify-between mt-8">
                     {
-              favoriteContacts?.find(favoriteItem=>favoriteItem?._id===item?._id)  ? (
+                        favoriteContacts?.find(favoriteItem => favoriteItem?._id === item?._id) ? (
                             <Tooltip title="Remove from favorite">
                                 <button onClick={() => handleFavoriteContact(item, false)} className="btn bg-blue-Purple hover:bg-black text-white rounded-full">
                                     <BookmarkAddedIcon className="text-white" />
