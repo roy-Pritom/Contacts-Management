@@ -66,7 +66,7 @@ const AddContactsPage = () => {
                             <MYInput name="name" label="Name" fullWidth={true} required={true} />
                         </Grid>
                         <Grid item md={6} sm={12} xs={12} >
-                            <MYInput name="email" label="Email" type="email" fullWidth={true} required={true} />
+                            <MYInput name="email" label="Email" type="email" fullWidth={true} required={false} />
                         </Grid>
 
                         <Grid item md={6} sm={12} xs={12}>
